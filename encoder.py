@@ -1,3 +1,4 @@
+#Jonathan Maynard
 def password_encoder(password):
     encoded_password = ""
     for digit in password:
