@@ -6,6 +6,13 @@ def password_encoder(password):
         encoded_password += str(encoded_digit)
     return encoded_password
 
+def password_decoder(encoded_password):
+    decoded_password = ""
+    for digit in encoded_password:
+        decoded_digit = (int(digit) - 3) % 10
+        decoded_password += str(decoded_digit)
+    return decoded_password
+
 password = input("Enter the 8-digit password to encode (only integers): ")
 
 if len(password) != 8 or not password.isdigit():
